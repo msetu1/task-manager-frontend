@@ -73,7 +73,7 @@ const TaskHeader = () => {
         </div>
 
         {/* Add New Task Button */}
-        <button className="flex items-center gap-2 bg-[#60E5AE] text-white px-5 py-2 rounded hover:bg-[#4ac99b]">
+        <button className="flex items-center gap-2 bg-[#60E5AE] text-black px-5 py-2 rounded hover:bg-[#4ac99b]">
           <FaPlus className="text-sm" /> Add New Task
         </button>
       </div>

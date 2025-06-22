@@ -8,10 +8,10 @@ import { FaArrowsSpin } from 'react-icons/fa6';
 import { MdOutlineTask } from 'react-icons/md';
 import { CiStopwatch } from 'react-icons/ci';
 import Image from 'next/image';
-import TaskHeader from './TaskHeader';
-import TaskCard from './TaskCard';
 
-const Dashboard = () => {
+import TaskDetailsHeader from './TaskDetailsHeader';
+
+const TaskDetails = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -30,13 +30,13 @@ const Dashboard = () => {
         alt="Dashboard Banner"
         width={1920}
         height={600}
-        className="w-full h-[300px] "
+        className="w-full h-[200px] "
       />
 
       {/* Navbar on top of image */}
       <nav className="absolute top-0 left-0 w-full px-[60px] pt-[47px] flex justify-between items-center z-10">
         {/* Title */}
-        <div className="text-xl font-bold text-white flex items-center gap-2">
+        <div className="text-xl font-bold  flex items-center gap-2 text-white">
           <CiStopwatch className="text-2xl text-white" /> Tasko
         </div>
 
@@ -100,22 +100,17 @@ const Dashboard = () => {
                   src="/images/dashboard-img/Roadmap Design (1).png"
                   alt="Overlay Banner"
                   width={448}
-                  height={335}
-                  className=" "
+                  height={150}
+                  className="w-[400px] h-[210px] "
                 />
       </div>
-      <div className="absolute top-32 left-0 text-white pl-[60px]">
-        <h2 className='text-[24px] font-semibold'>Hi Thomas</h2>
-        <h2 className='text-[40px] font-bold'>Welcome to Dashboard</h2>
-      </div>
-      <div className="absolute top-[240px] left-0 w-full z-10">
+      <div className="absolute top-[140px] left-0 w-full z-10">
               <div className="mx-[60px] rounded-[15px] shadow-2xl  bg-white mb-[67px]">
-                <TaskHeader/>
-                <TaskCard/>
+                <TaskDetailsHeader/>
               </div>
             </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default TaskDetails;
